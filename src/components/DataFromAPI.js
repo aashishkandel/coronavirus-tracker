@@ -1,6 +1,7 @@
 import getDataFromAPI from "../utils/getDataFromAPI";
 import React from 'react';
 import { DataCard, CardContainer} from "./Styled";
+import CountUp from "react-countup";
 
 export default function DataFromAPI({url}){
     const dataFromAPI  = getDataFromAPI(url);
@@ -10,15 +11,15 @@ export default function DataFromAPI({url}){
         <CardContainer>
             <DataCard>
                 <h3>Confirmed:</h3>
-                <span style={{color:"yellow", fontSize:"20px", marginTop:"-15px"}}>{dataFromAPI.confirmed.value}</span>
+                <CountUp duration={1.3} end={dataFromAPI.confirmed.value} style={{color:"yellow", marginTop:"-20px"}}/>
             </DataCard>
             <DataCard>
                 <h3>deaths:</h3>
-                <span style={{color:"red", fontSize:"20px", marginTop:"-15px"}}>{dataFromAPI.deaths.value}</span>
+                <CountUp duration={1.3} end={dataFromAPI.deaths.value} style={{color:"red", marginTop:"-20px"}}/>
             </DataCard>
             <DataCard>
                 <h3>recovered:</h3>
-                <span style={{color:"green", fontSize:"20px", marginTop:"-15px"}}>{dataFromAPI.recovered.value}</span>
+                <CountUp duration={1.3} end={dataFromAPI.recovered.value} style={{color:"green", marginTop:"-20px"}}/>
             </DataCard>
         </CardContainer>
     )

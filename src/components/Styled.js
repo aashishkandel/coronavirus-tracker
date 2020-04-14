@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const DataCard = styled.div`
-    background: grey;
-    font-size: 1rem;
+    background: #6983aa;
+    font-size: 2rem;
     /* height: 200px; */
     margin: 0 15px;
     border-radius: 15px;
     height: 200px;
-    @media only screen and (max-width:600px){
+    @media only screen and (max-width:700px){
+        border-radius: 10px;
+        font-size: 1rem;
         height: 100px;
         margin: 10px 7px;
         margin-bottom: 44px;
@@ -27,6 +29,12 @@ export const CardContainer = styled.div`
 `;
 
 export const StyledH2 = styled.h2`
-    margin: 3px;
-    color: purple;
+    margin: 5px;
+    color: #00adb5;
+`;
+
+export const SelectContainer = styled.div`
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom:10px;
 `;
